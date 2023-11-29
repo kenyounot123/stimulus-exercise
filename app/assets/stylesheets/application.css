@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+.dropdown-menu {
+  display: none;
+}
+.dropdown-menu.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+div>h1:last-child {
+  color: red;
+  border: 5px dotted red;
+}
+div>h2 {
+  border: 5px solid purple;
+}
+
+.highlighted {
+  color: red;
+}
