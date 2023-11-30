@@ -27,7 +27,7 @@
 .show {
   display: block;
 }
-div>h1:last-child {
+div>h1{
   color: red;
   border: 5px dotted red;
 }

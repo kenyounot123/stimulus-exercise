@@ -9,15 +9,17 @@
     <%= select_tag 'myDropdown', options_for_select(([['Option 1', 'option1'], ['Option 2', 'option2'], ['Option 3', 'option3']])) %>
   </div>
 
-<%# Clicking an element will hide the clicked element and show another %>
+  <%# Clicking an element will hide the clicked element and show another %>
   <h2 data-toggle-target="specialElement"
-      data-action="click->toggle#hideAndShowElement"> Click this element. It will hide itself then show another element </h2>
+      data-action="click->toggle#hideAndShowElement"> Click this element. It will hide itself then show another element
+  </h2>
   <h1 data-toggle-target="showElement"
       class="hidden"
-      data-action="click->toggle#hideAndShowElement">SURPRISE</h1>
+      data-action="click->toggle#hideAndShowElement">SURPRISE
+  </h1>
 
 
-<%# Clicking a checkbox will highlight the element containing the checkbox %>
+  <%# Clicking a checkbox will highlight the element containing the checkbox %>
   <div data-toggle-target="checkbox">
     <div data-action="change->toggle#highlightCheckbox">
       <%= check_box_tag 'option', 'option1', false %>
@@ -36,6 +38,14 @@
       <%= label_tag 'option3', 'Option 3' %>
     </div>
   </div>
+</div>
+
+<div data-controller="text-input" data-text-input-character-count-value=0>
+  <div class="text-area">
+    <input type="text" data-text-input-target="textBox"
+                       data-action="input->text-input#updateCharacterCount">
+  </div>
+  <p data-text-input-target="characterCountInfo"></p>
 </div>
 
 
